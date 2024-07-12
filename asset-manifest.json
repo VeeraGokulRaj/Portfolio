@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Portfolio/static/css/main.5d391ee7.css",
+    "main.js": "/Portfolio/static/js/main.eec642f5.js",
+    "static/media/portfolio.png": "/Portfolio/static/media/portfolio.b54649515310e3cb4e2f.png",
+    "static/media/veera.jpg": "/Portfolio/static/media/veera.54a3ddeff51c44b2cc9d.jpg",
+    "static/media/OnDuty.jpg": "/Portfolio/static/media/OnDuty.ef7533702067510587e1.jpg",
+    "static/media/SurvilanceSystem.png": "/Portfolio/static/media/SurvilanceSystem.33b602c4221f8dad236a.png",
+    "static/media/Veera_Resume.pdf": "/Portfolio/static/media/Veera_Resume.8e9b7da4a2c7ff0267aa.pdf",
+    "static/media/IEEE.jpg": "/Portfolio/static/media/IEEE.52e039f46fd97039a08c.jpg",
+    "static/media/PaperPresentation.jpg": "/Portfolio/static/media/PaperPresentation.6e8508b2849fc1e1409e.jpg",
+    "static/media/bleander.jpg": "/Portfolio/static/media/bleander.bcd440bb3d11428c19b8.jpg",
+    "static/media/JustAMin.jpg": "/Portfolio/static/media/JustAMin.60ffcd4a730e75e90358.jpg",
+    "index.html": "/Portfolio/index.html",
+    "main.5d391ee7.css.map": "/Portfolio/static/css/main.5d391ee7.css.map",
+    "main.eec642f5.js.map": "/Portfolio/static/js/main.eec642f5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5d391ee7.css",
+    "static/js/main.eec642f5.js"
+  ]
+}
