@@ -167,20 +167,20 @@ function Contact() {
       <div class="sm:flex sm:items-center sm:justify-between text-center sm:dark:bg-[#000000] sm:bg-[#d7d6d6] h-16 p-6 mt-6">
         <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 VEERA. All Rights Reserved.</span>
         <div class="flex mt-4 sm:justify-center sm:mt-0 ml-28">
-          <a href="https://www.instagram.com/harish._.14/" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+          <a href="https://www.instagram.com/_.v_.e_.e_.r_.a_/" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
             <FaInstagram />
           </a>
-          <a href="https://github.com/14harish" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+          <a href="https://github.com/VeeraGokulRaj" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
             <FaGithub />
           </a>
           <a
-            href="https://www.linkedin.com/in/harish-v-29734821a/"
+            href="https://www.linkedin.com/in/veeragokulraj/"
             class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
           >
             <FaLinkedin />
           </a>
           <a
-            href="https://api.whatsapp.com/send?phone=9952807662&text=Hai%HARISH%20!%20."
+            href="https://api.whatsapp.com/send?phone=8610658443&text=Hai VEERA "
             class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
           >
             <FaWhatsapp />
