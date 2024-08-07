@@ -1,94 +1,149 @@
 import React from "react";
-
 import transition from "../transition";
-import 'react-circular-progressbar/dist/styles.css';
+import "react-circular-progressbar/dist/styles.css";
 import Skills from "./Skills";
-import Resume from "../assets/Resume/Veera_Resume.pdf"
+import Resume from "../assets/Resume/Veera_Resume.pdf";
 import { FaCloudDownloadAlt } from "react-icons/fa";
+import { useInView } from "react-intersection-observer";
 
 function About() {
-  
+  const { ref: animation, inView: animationInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1
+  });
   return (
+    <>
+      <section>
+        <h1 className="text-4xl half-nav-bt-sm:text-5xl md:text-6xl font-extrabold text-center py-20 hidden sm:block underline underline-offset-8 decoration-[3px] decoration-[#2196f3]">
+          ABOUT <span className="text-[#2196f3] dark:text-[#42aefc]">ME</span>
+        </h1>
+      </section>
+      <div className="mb-10 dark:bg-[#111111] bg-white dark:text-[white] text-[black] h-full mx-auto w-[90%] sm:mx-[3%] md:my-20 ">
+        <h1 className="text-3xl font-extrabold text-center py-10  sm:py-20 block sm:hidden underline underline-offset-8 decoration-[3px] decoration-[#2196f3]">
+          ABOUT <span className="text-[#42aefc]">ME</span>
+        </h1>
+        <div className="flex flex-col justify-center items-center sm:flex-row md:justify-around sm:items-start">
+          <section className="w-[90%] mx-auto sm:mx-0 sm:w-[30%]">
+            <p className="font-bold text-2xl hidden sm:block mb-5 text-center sm:text-left">PROJECTS STATUS</p>
+            <div className="grid grid-row-2 md:grid-cols-2 gap-4 sm:justify-between sm:items-center">
+              <section className={`w-[100%] h-[100%] text-center ${animationInView ? "animate-zoomIn" : ""} `} ref={animation}>
+                <div className="dark:border-gray-800  border-2 w-[70%] h-[100%] mx-auto p-10 sm:p-0 sm:mx-0 sm:w-[100%] sm:h-[100%]  md:w-[100%] md:h-[170%] flex items-center flex-col justify-center">
+                  <p className="md:text-6xl text-4xl font-bold text-[#2196f3] dark:text-[#42aefc] hover:scale-project hover:-translate-y-3  ease-in duration-300">
+                    2
+                  </p>
+                  <p className="sm:text-[.8rem] md:text-base mt-2 font-medium">
+                    COMPLETED
+                    <br />
+                    PROJECTS
+                  </p>
+                </div>
+              </section>
+              <section className={`w-[100%] h-[100%] text-center ${animationInView ? "animate-zoomIn" : ""} `} ref={animation}>
+                <div className="dark:border-gray-800  border-2 w-[70%] h-[100%] p-10 mx-auto sm:mx-0 sm:p-0 sm:w-[100%] sm:h-[100%] md:w-[100%] md:h-[170%] flex items-center flex-col justify-center">
+                  <p className="md:text-6xl text-4xl font-bold text-[#2196f3] dark:text-[#42aefc] hover:scale-project hover:-translate-y-3 ease-in duration-300">
+                    1
+                  </p>
+                  <p className="sm:text-[.8rem] md:text-base mt-2 font-medium">
+                    ONGOING
+                    <br />
+                    PROJECTS
+                  </p>
+                </div>
+              </section>
+            </div>
+          </section>
 
-    <div className="dark:bg-[#111111] bg-white dark:text-[white] text-[#616262] h-full ">
-
-      <div className="sm:flex sm:flex-col sm:items-center sm:justify-center pt-20">
-        <div className="relative flex items-center justify-center">
-          <h1 className="sm:text-9xl  text-6xl font-extrabold absolute text-[#5d5d5d] opacity-20">RESUME</h1>
-          <div className="relative z-10">
-            <h1 className="sm:text-6xl text-3xl font-extrabold">
-              ABOUT <span className="text-[#42aefc]">ME</span>
-            </h1>
-          </div>
+          <section className="w-[80%] mx-auto sm:mx-0 my-7 sm:my-0 sm:w-[43%]">
+            <p className="font-bold text-2xl mb-5 text-center sm:text-left">PERSONAL INFO</p>
+            <div className="flex flex-col justify-center items-center show-info:flex-row show-info:justify-between">
+              <table
+                className={`table-auto w-full show-info:w-[30%] ${animationInView ? "animate-fromLeftToCenter" : ""} `}
+                ref={animation}
+              >
+                <p className="my-2" />
+                <tr>
+                  <td className="dark:text-[#B3B3B3] text-slate-600 font-medium">First_Name</td>
+                  <td className="font-semibold dark:text-white text-black text-end show-info:text-start pl-2 ">
+                    VEERAGOKULRAJ{" "}
+                  </td>
+                </tr>
+                <p className="my-2" />
+                <tr>
+                  <td className="dark:text-[#B3B3B3] text-slate-600 font-medium">Nationality</td>
+                  <td className="font-semibold dark:text-white text-black text-end show-info:text-start pl-2 ">Indian </td>
+                </tr>
+                <p className="my-2" />
+                <tr>
+                  <td className="dark:text-[#B3B3B3] text-slate-600 font-medium">Address</td>
+                  <td className="font-semibold dark:text-white text-black text-end show-info:text-start pl-2 ">
+                    Salem, Tamil Nadu, India
+                  </td>
+                </tr>
+                <p className="my-2" />
+                <tr>
+                  <td className="dark:text-[#B3B3B3] text-slate-600 font-medium">Email</td>
+                  <td className="font-semibold dark:text-white text-black text-end show-info:text-start pl-2 ">
+                    easwarigokul@gmail.com
+                  </td>
+                </tr>
+                <p className="my-2" />
+                <tr>
+                  <td className="dark:text-[#B3B3B3] text-slate-600 font-medium">Languages</td>
+                  <td className="font-semibold dark:text-white text-black text-end show-info:text-start pl-2 ">
+                    Tamil and English
+                  </td>
+                </tr>
+              </table>
+              <table className={`tabel-auto w-full show-info:w-[30%] ${animationInView ? "animate-fromRightToCenter" : ""} `}
+                ref={animation}>
+                <p className="my-2" />
+                <tr>
+                  <td className="dark:text-[#B3B3B3] text-slate-600 font-medium">Last_Name</td>
+                  <td className="font-semibold dark:text-white text-black text-end show-info:text-start pl-2 ">SURESH</td>
+                </tr>
+                <p className="my-2" />
+                <tr>
+                  <td className="dark:text-[#B3B3B3] text-slate-600 font-medium">Age</td>
+                  <td className="font-semibold dark:text-white text-black text-end show-info:text-start pl-2 ">21</td>
+                </tr>
+                <p className="my-2" />
+                <tr>
+                  <td className="dark:text-[#B3B3B3] text-slate-600 font-medium">Roll</td>
+                  <td className="font-semibold dark:text-white text-black text-end show-info:text-start pl-2 ">Developer</td>
+                </tr>
+                <p className="my-2" />
+                <tr>
+                  <td className="dark:text-[#B3B3B3] text-slate-600 font-medium">Phone</td>
+                  <td className="font-semibold dark:text-white text-black text-end show-info:text-start pl-2 ">8610658443</td>
+                </tr>
+                <p className="my-2" />
+                <tr>
+                  <td className="dark:text-[#B3B3B3] text-slate-600 font-medium">DOB</td>
+                  <td className="font-semibold dark:text-white text-black text-end show-info:text-start pl-2 ">17/10/2002</td>
+                </tr>
+              </table>
+            </div>
+            <a href={Resume} download="Resume">
+              <div className="text-center flex justify-center show-info:justify-end">
+                <button
+                  type="submit"
+                  className="relative overflow-hidden text-[#616262] dark:text-white rounded-full flex items-center gap-2 border border-[#42aefc] group hover:text-white mt-8"
+                >
+                  <span className="relative z-10 pl-6 py-2 dark:text-[#f8f7f7] text-slate-700 hover:text-white dark:hover:text-[#f8f7f7] font-semibold">
+                    DOWNLOAD CV
+                  </span>
+                  <div className="absolute inset-0 bg-[#2196f3] dark:bg-[#42aefc] transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out" />
+                  <span className="relative z-10 bg-[#2196f3] dark:bg-[#42aefc] p-2 rounded-full">
+                    <FaCloudDownloadAlt size={24} color="white" />
+                  </span>
+                </button>
+              </div>
+            </a>
+          </section>
         </div>
       </div>
-    <div className="sm:flex sm:gap-2 mt-20 ">
-      <div className="grid grid-cols-1 md:grid-cols-2 text-center justify-center items-center sm:ml-36 sm:gap-8 gap-2 m-20">
-        <div className="dark:border-[#232222] border-2 sm:p-14 p-6">
-          <p className="sm:text-6xl text-4xl font-bold text-[#42aefc]">2</p>
-          <p className="sm:text-lg sm:text-right">COMPLETED</p>
-          <p className="sm:text-lg sm:text-right">PROJECTS</p>
-        </div>
-        <div className="dark:border-[#232222] border-2 sm:p-14 p-6">
-          <p className="sm:text-6xl text-4xl font-bold text-[#42aefc]">1</p>
-          <p className="text-lg sm:text-right">ONGOING</p>
-          <p className="text-lg sm:text-right">PROJECTS</p>
-        </div>
-      </div>
-      <div className="sm:text-right text-center sm:p-10 sm:ml-20 sm:m-2 p-2">
-        <h1 className="font-bold text-2xl mb-6">PERSONAL INFOS</h1>
-        <div className="sm:flex">
-        <div className="">
-        <p className="pb-4 text-[#B3B3B3]">
-          <span className="font-semibold dark:text-white text-[#616262]">VEERAGOKULRAJ :</span> First Name
-        </p>
-        <p className="pb-4 text-[#B3B3B3]">
-          <span className="font-semibold dark:text-white text-[#616262]">Indian :</span> Nationality
-        </p>
-        <p className="pb-4 text-[#B3B3B3]">
-          <span className="font-semibold dark:text-white text-[#616262]">Salem, Tamil Nadu, India :</span> Address
-        </p>
-        <p className="pb-4 text-[#B3B3B3]">
-          <span className="font-semibold dark:text-white text-[#616262]">easwarigokul@gmail.com :</span> Email
-        </p>
-        <p className="pb-4 text-[#B3B3B3]">
-          <span className="font-semibold dark:text-white text-[#616262]">English,Tamil :</span> Languages
-        </p>
-        </div>
-        <div className="ml-10">
-        <p className="pb-4 text-[#B3B3B3]">
-          <span className="font-semibold dark:text-white text-[#616262]">Suresh :</span> Last Name
-        </p>
-        <p className="pb-4 text-[#B3B3B3]">
-          <span className="font-semibold dark:text-white text-[#616262]">Years 21 :</span> Age
-        </p>
-        <p className="pb-4 text-[#B3B3B3]">
-          <span className="font-semibold text-green-400">Available :</span> Developer
-        </p>
-        <p className="pb-4 text-[#B3B3B3]">
-          <span className="font-semibold dark:text-white text-[#616262]">8610658443 :</span> Phone
-        </p>
-        <p className="pb-4 text-[#B3B3B3]">
-          <span className="font-semibold dark:text-white text-[#616262]">17 Oct 2002 :</span> DOB
-        </p>
-        <a href={Resume} download="Resume">
-        <div className="text-center flex sm:justify-end justify-center">
-          <button 
-            type="submit" 
-            className="relative overflow-hidden text-[#616262] dark:text-white rounded-full flex items-center gap-2 border border-[#42aefc] group hover:text-white mt-8"
-          >
-          <span className="relative z-10 pl-6 py-2 font-semibold">DOWNLOAD CV</span>
-          <div className="absolute inset-0 bg-[#42aefc] transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></div>
-          <span className='relative z-10 bg-[#42aefc] p-2 rounded-full'><FaCloudDownloadAlt size={24} color='white' /></span>
-      </button>
-    </div>
-        </a>
-        </div>
-        </div>
-      </div>
-     </div>
-     <Skills/>
-    </div>    
+      <Skills />
+    </>
   );
 }
 

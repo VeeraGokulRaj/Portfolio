@@ -49,15 +49,15 @@ function Certficates() {
     <Slide index={index} key={index}>
       <div className="flex flex-col items-center justify-center">
         <img src={certificate.link} alt={certificate.alt} className="w-full h-full object-contain" />
-        <h3 className="text-center mt-4">{certificate.title}</h3>
+        <h3 className="text-center mt-4 text-lg md:text-xl">{certificate.title}</h3>
       </div>
     </Slide>
   ));
 
   return (
-    <div className="dark:bg-[#111111] bg-white dark:text-[white] text-[#616262] flex items-center justify-center h-full pt-36">
+    <div className="dark:bg-[#111111] bg-white dark:text-[white] text-slate-800 flex items-center justify-center">
       <div className="w-full max-w-lg p-4">
-        <h1 className="font-semibold text-2xl mb-20 text-center">MY CERTIFICATES</h1>
+        <h1 className="font-bold text-2xl my-10 text-center underline underline-offset-8 decoration-[2px] decoration-[#2196f3]">MY CERTIFICATES</h1>
         <CarouselProvider
           naturalSlideWidth={400}
           naturalSlideHeight={380}
@@ -68,18 +68,20 @@ function Certficates() {
           isPlaying={true}
           playDirection="forward"
         >
-          <Slider className="certificateslides">
-            <a href="https://drive.google.com/file/d/16iZJ97PzVi5n_9M9jAI8oH6gfQHJst5h/view?usp=drivesdk" target="blank">
-              {certificateSlides}
-            </a>
-          </Slider>
-          <div className="flex items- justify-around mt-4 ">
-            <ButtonBack className="navigationbtnleft navigationbtn">
-              <FaArrowAltCircleLeft size={32} />
-            </ButtonBack>
-            <ButtonNext className="navigationbtnright navigationbtn">
-              <FaArrowAltCircleRight size={32} />{" "}
-            </ButtonNext>
+          <div className="relative">
+            <Slider className="certificateslides">
+              <a href="https://drive.google.com/file/d/16iZJ97PzVi5n_9M9jAI8oH6gfQHJst5h/view?usp=drivesdk" target="blank">
+                {certificateSlides}
+              </a>
+            </Slider>
+            <div className="flex justify-between pb-5 sm:pb-0">
+              <ButtonBack className="navigationbtnleft navigationbtn absolute bottom-[0] left-[10%] sm:bottom-[60%] sm:left-[-10%]">
+                <FaArrowAltCircleLeft size={32} />
+              </ButtonBack>
+              <ButtonNext className="navigationbtnright navigationbtn absolute bottom-[0] right-[10%] sm:bottom-[60%] sm:right-[-10%]">
+                <FaArrowAltCircleRight size={32} />{" "}
+              </ButtonNext>
+            </div>
           </div>
         </CarouselProvider>
       </div>

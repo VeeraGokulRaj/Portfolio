@@ -55,48 +55,39 @@ function Project() {
   ];
 
   return (
-    <div className="sm:h-screen h-full dark:text-white text-[#616262]">
-      <div className="flex flex-col items-center justify-center pt-20">
-        <div className="relative flex items-center justify-center">
-          <h1 className="sm:text-9xl text-7xl font-extrabold absolute text-[#5d5d5d] opacity-20">WORK</h1>
-          <div className="relative z-10">
-            <h1 className="sm:text-5xl text-3xl font-extrabold">
-              MY <span className="text-[#42aefc]">PROJECTS</span>
-            </h1>
-          </div>
-        </div>
-
-        <div className="flex sm:gap-12 gap-5 overflow-x-scroll sm:w-5/6 mt-20 sm:mr-20 mr-0 sm:mb-0 mb-28 container cursor-pointer pl-3">
-          {projectsData.map(project => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: project.id * 0.0 }}
-              className="project-card dark:bg-[#252525] bg-[#F5F8FC] rounded-lg shadow-lg p-8 min-w-96 overflow-hidden hover:scale-x-105 transition-transform duration-300 hover:text-[#42aefc]"
-            >
-              {/* <div key={project.id} className="project-card dark:bg-[#252525] bg-[#F5F8FC] rounded-lg shadow-lg p-8 min-w-96 overflow-hidden hover:scale-x-105 transition-transform duration-300 hover:text-[#42aefc]"> */}
-              <a href={project.link} target="blank" className="block">
-                <div className="relative overflow-hidden border-[#42aefc] border-b-4">
-                  <img
-                    className="w-full h-48 transform scale-100 hover:scale-110 transition-transform duration-300"
-                    src={project.image}
-                    alt={project.title}
-                  />
-                </div>
-                <h3 className="text-xl font-bold mt-4">{project.title}</h3>
-                <p className="dark:text-[#D2D2D2] text-[#616262] text-sm mt-2">{project.description}</p>
-                <div className="flex items-center mt-4">
-                  {project.stackIcons.map((icon, index) => (
-                    <div key={index} className="mr-2 text-xl text-[#42aefc]">
-                      {icon}
-                    </div>
-                  ))}
-                </div>
-              </a>
-            </motion.div>
-          ))}
-        </div>
+    <div className="h-[95vh] sm:h-screen dark:text-white flex flex-col  justify-evenly">
+      <h1 className="text-4xl half-nav-bt-sm:text-5xl md:text-6xl font-extrabold text-center py-5 sm:py-0 underline underline-offset-8 decoration-[3px] decoration-[#2196f3]">
+        MY <span className="text-[#2196f3] dark:text-[#42aefc]">PROJECTS</span>
+      </h1>
+      <div className="flex sm:gap-12 gap-5 overflow-x-scroll w-[85%] justify-start ml-[4%]  container cursor-pointer pb-3 sm:pb-0">
+        {projectsData.map(project => (
+          <motion.div
+            key={project.id}
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: project.id * 0.0 }}
+            className="project-card dark:bg-[#252525] bg-[#F5F8FC] rounded-lg shadow-lg p-8 min-w-96 overflow-hidden hover:scale-x-105 transition-transform duration-300 dark:hover:text-[#42aefc] hover:text-[#2196f3]"
+          >
+            <a href={project.link} target="blank" className="block">
+              <div className="relative overflow-hidden border-[#42aefc] border-b-4">
+                <img
+                  className="w-full h-48 transform scale-100 hover:scale-110 transition-transform duration-300"
+                  src={project.image}
+                  alt={project.title}
+                />
+              </div>
+              <h3 className="text-xl font-bold mt-4">{project.title}</h3>
+              <p className="dark:text-[#D2D2D2] text-[#616262] text-sm mt-2">{project.description}</p>
+              <div className="flex items-center mt-4">
+                {project.stackIcons.map((icon, index) => (
+                  <div key={index} className="mr-2 text-xl  text-[#2196f3] dark:text-[#42aefc] hover:-translate-y-2 hover:scale-110 ease-in duration-300">
+                    {icon}
+                  </div>
+                ))}
+              </div>
+            </a>
+          </motion.div>
+        ))}
       </div>
     </div>
   );

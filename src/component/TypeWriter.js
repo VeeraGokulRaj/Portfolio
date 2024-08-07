@@ -24,7 +24,7 @@ const Typewriter = ({ texts, speed = 150, interval = 3000 }) => {
     }, [charIndex, textIndex, texts, speed, interval]);
 
     return (
-        <span className="typewriter  text-[#42aefc]">
+        <span className="typewriter text-[#2196f3] dark:text-[#42aefc] ">
             {displayedText}
         </span>
     );
