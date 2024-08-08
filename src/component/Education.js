@@ -4,7 +4,8 @@ import Certficates from "./Certficates";
 import { FaSchool } from "react-icons/fa";
 import { MdSchool } from "react-icons/md";
 import { useInView } from "react-intersection-observer";
-import Navbar from "./Navbar";
+import '../index.css';
+
 
 function Education() {
   const { ref: animation, inView: animationInView } = useInView({
@@ -16,7 +17,7 @@ function Education() {
       year: "2024",
       title: "BACHELOR DEGREE",
       institution: "K.S.R COLLEGE OF TECHNOLOGY",
-      description: "BTECH-INFORMATION TECHNOLOGY  CGPA:8.8",
+      description: "CGPA: 8.8",
       icon: <MdSchool className="text-white" />
     },
     {
@@ -64,7 +65,7 @@ function Education() {
                 <h3 className="text-sm half-nav:text-base sm:text-lg font-semibold">
                   {item.title} – <span className="text-sm half-nav:text-base sm:text-lg">{item.institution}</span>
                 </h3>
-                <p className="text-[.75rem] sm:text-base text-gray-500">{item.description}</p>
+                <p className="text-[.75rem] sm:text-base text-[#2196f3] dark:text-[#42aefc] font-bold">{item.description}</p>
               </div>
               <div
                 className={`order-1 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-[#2196f3] dark:bg-[#42aefc] flex items-center justify-center ${

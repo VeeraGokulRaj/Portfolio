@@ -1,21 +1,41 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import transition from "../transition";
 import { FaInstagram, FaTelegramPlane, FaGithub, FaLinkedin, FaWhatsapp, FaMap, FaPhoneSquareAlt } from "react-icons/fa";
 import { IoMdMailOpen } from "react-icons/io";
 import emailjs from "emailjs-com";
 import { useInView } from "react-intersection-observer";
 import Footer from "./Footer";
+import { DataValidation } from "./Functionality";
+
 function Contact() {
   const { ref: animation, inView: animationInView } = useInView({
     triggerOnce: true,
     threshold: 0.1
   });
 
+  const [formData, setFormData] = useState({
+    email: "",
+    name: "",
+    subject: "",
+    message: ""
+  });
+
+  function enterFormData(event) {
+    const { name, value, type, checked } = event.target;
+    setFormData(prevData => {
+      return {
+        ...prevData,
+        [name]: type === "checkbox" ? checked : value
+      };
+    });
+    // console.log(loginFormData.checkBox);
+  }
+
   const form = useRef();
 
   const sendEmail = e => {
     e.preventDefault();
-
+    if (!DataValidation(formData)) return;
     emailjs.sendForm("service_f4wqqzs", "template_ynrkuba", form.current, "-h9Usn4BYbJLT6t5f").then(
       result => {
         console.log(result.text);
@@ -48,8 +68,9 @@ function Contact() {
                     id="email"
                     autoComplete="email"
                     placeholder="YOUR EMAIL"
-                    className="input-field border border-1 sm:border-2 dark:border-slate-300 border-slate-400 rounded-full w-full      h-[70%] md:h-full text-right dark:bg-[#252525] py-3 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0 focus:outline-0 focus:border-separate"
+                    className="input-field border border-1 sm:border-2 dark:border-slate-300 border-slate-400 rounded-full w-full      h-[83%] md:h-full text-right dark:bg-[#252525] py-3 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0 focus:outline-0 focus:border-separate"
                     name="email"
+                    onChange={enterFormData}
                   />
                 </div>
                 <div className="w-full">
@@ -59,8 +80,9 @@ function Contact() {
                     id="name"
                     autoComplete="given-name"
                     placeholder="YOUR NAME"
-                    className="input-field border border-1 sm:border-2 dark:border-slate-300 border-slate-400 rounded-full w-full h-[70%] md:h-full text-right dark:bg-[#252525] py-3 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0 focus:outline-0 focus:border-separate"
+                    className="input-field border border-1 sm:border-2 dark:border-slate-300 border-slate-400 rounded-full w-full h-[83%] md:h-full text-right dark:bg-[#252525] py-3 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0 focus:outline-0 focus:border-separate"
                     name="name"
+                    onChange={enterFormData}
                   />
                 </div>
               </div>
@@ -73,6 +95,7 @@ function Contact() {
                   placeholder="YOUR SUBJECT"
                   className="input-field border border-1 sm:border-2 dark:border-slate-300 border-slate-400 rounded-full mb-2 w-full h-[70%] md:h-full text-right dark:bg-[#252525] py-3 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0 focus:outline-0 focus:border-separate"
                   name="subject"
+                  onChange={enterFormData}
                 />
               </div>
               <div className="mb-1 sm:mb-6 ">
@@ -84,6 +107,7 @@ function Contact() {
                   rows="6"
                   placeholder="YOUR MESSAGE"
                   className="input-field mb-2 w-full h-[70%] md:h-full border border-1 sm:border-2 dark:border-slate-300 border-slate-400 rounded-2xl text-right dark:bg-[#252525] py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0 focus:outline-0 focus:border-separate"
+                  onChange={enterFormData}
                 />
               </div>
             </div>
@@ -111,19 +135,14 @@ function Contact() {
               className={`flex justify-center sm:justify-end space-x-6 py-7 ${animationInView ? "animate-zoomIn" : ""} `}
               ref={animation}
             >
-              <a href="https://www.instagram.com/_.v_.e_.e_.r_.a_/" target="_blank" rel="noopener noreferrer" className="">
+              <a href="https://www.linkedin.com/in/veeragokulraj/" target="_blank" rel="noopener noreferrer" className="">
                 <p className="text-2xl sm:text-3xl md:text-4xl dark:bg-[#2B2A2A] bg-[#EEEEEE] text-[#666666] dark:text-white  rounded-full hover:bg-[#2196f3] dark:hover:bg-[#42aefc] hover:text-white ease-in duration-300 p-2">
-                  <FaInstagram />
+                  <FaLinkedin />
                 </p>
               </a>
               <a href="https://github.com/VeeraGokulRaj" target="_blank" rel="noopener noreferrer" className="">
                 <p className="text-2xl sm:text-3xl md:text-4xl dark:bg-[#2B2A2A] bg-[#EEEEEE] text-[#666666] dark:text-white  rounded-full hover:bg-[#2196f3] dark:hover:bg-[#42aefc] hover:text-white ease-in duration-300 p-2">
                   <FaGithub />
-                </p>
-              </a>
-              <a href="https://www.linkedin.com/in/veeragokulraj/" target="_blank" rel="noopener noreferrer" className="">
-                <p className="text-2xl sm:text-3xl md:text-4xl dark:bg-[#2B2A2A] bg-[#EEEEEE] text-[#666666] dark:text-white  rounded-full hover:bg-[#2196f3] dark:hover:bg-[#42aefc] hover:text-white ease-in duration-300 p-2">
-                  <FaLinkedin />
                 </p>
               </a>
               <a
@@ -134,6 +153,11 @@ function Contact() {
               >
                 <p className="text-2xl sm:text-3xl md:text-4xl dark:bg-[#2B2A2A] bg-[#EEEEEE] text-[#666666] dark:text-white  rounded-full hover:bg-[#2196f3] dark:hover:bg-[#42aefc] hover:text-white ease-in duration-300 p-2">
                   <FaWhatsapp />
+                </p>
+              </a>
+              <a href="https://www.instagram.com/_.v_.e_.e_.r_.a_/" target="_blank" rel="noopener noreferrer" className="">
+                <p className="text-2xl sm:text-3xl md:text-4xl dark:bg-[#2B2A2A] bg-[#EEEEEE] text-[#666666] dark:text-white  rounded-full hover:bg-[#2196f3] dark:hover:bg-[#42aefc] hover:text-white ease-in duration-300 p-2">
+                  <FaInstagram />
                 </p>
               </a>
             </div>
