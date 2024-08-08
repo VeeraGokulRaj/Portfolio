@@ -27,7 +27,7 @@ function Navbar() {
         className={`text-${bgColor} dark:text-${darkBgColor} hover:text-[#2196f3] dark:hover:text-[#42aefc] ease-in duration-200`}
       >
         <button
-          className={`group flex items-center justify-start half-nav:w-10 half-nav:h-10 md:h-11 md:w-11 w-10 h-10 
+          className={`mx-auto sm:mx-0 group flex items-center justify-start half-nav:w-10 half-nav:h-10 md:h-11 md:w-11 w-10 h-10 
                    bg-${bgColor} dark:bg-${darkBgColor} text-[#666666] dark:text-white 
                    rounded-full cursor-pointer relative overflow-hidden transition-all 
                    duration-300 shadow-lg show-nav:hover:w-32 active:translate-x-1 active:translate-y-1 
@@ -51,7 +51,7 @@ function Navbar() {
         } hover:text-[#2196f3] dark:hover:text-[#42aefc] ease-in duration-200`}
       >
         <button
-          className={`group flex items-center justify-start half-nav:w-10 half-nav:h-10 md:h-11 md:w-11 w-10 h-10 dark:bg-${
+          className={`mx-auto sm:mx-0 group flex items-center justify-start half-nav:w-10 half-nav:h-10 md:h-11 md:w-11 w-10 h-10 dark:bg-${
             isActive("/Portfolio/about") ? "[#42aefc]" : "[#2B2A2A]"
           } bg-${
             isActive("/Portfolio/about") ? "[#42aefc]" : "[#EEEEEE]"
@@ -75,7 +75,7 @@ function Navbar() {
         } hover:text-[#2196f3] dark:hover:text-[#42aefc] ease-in duration-200`}
       >
         <button
-          className={`group flex items-center justify-start half-nav:w-10 half-nav:h-10 md:h-11 md:w-11 w-10 h-10 dark:bg-${
+          className={`mx-auto sm:mx-0 group flex items-center justify-start half-nav:w-10 half-nav:h-10 md:h-11 md:w-11 w-10 h-10 dark:bg-${
             isActive("/Portfolio/education") ? "[#42aefc]" : "[#2B2A2A]"
           } bg-${
             isActive("/Portfolio/education") ? "[#42aefc]" : "[#EEEEEE]"
@@ -99,7 +99,7 @@ function Navbar() {
         } hover:text-[#2196f3] dark:hover:text-[#42aefc] ease-in duration-200`}
       >
         <button
-          className={`group flex items-center justify-start half-nav:w-10 half-nav:h-10 md:h-11 md:w-11 w-10 h-10 dark:bg-${
+          className={`mx-auto sm:mx-0 group flex items-center justify-start half-nav:w-10 half-nav:h-10 md:h-11 md:w-11 w-10 h-10 dark:bg-${
             isActive("/Portfolio/project") ? "[#42aefc]" : "[#2B2A2A]"
           } bg-${
             isActive("/Portfolio/project") ? "[#42aefc]" : "[#EEEEEE]"
@@ -123,7 +123,7 @@ function Navbar() {
         } hover:text-[#2196f3] dark:hover:text-[#42aefc] ease-in duration-200`}
       >
         <button
-          className={`group flex items-center justify-start half-nav:w-10 half-nav:h-10 md:h-11 md:w-11 w-10 h-10 dark:bg-${
+          className={`mx-auto sm:mx-0 group flex items-center justify-start half-nav:w-10 half-nav:h-10 md:h-11 md:w-11 w-10 h-10 dark:bg-${
             isActive("/Portfolio/contact") ? "[#42aefc]" : "[#2B2A2A]"
           } bg-${
             isActive("/Portfolio/contact") ? "[#42aefc]" : "[#EEEEEE]"
