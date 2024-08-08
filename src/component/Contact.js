@@ -40,38 +40,38 @@ function Contact() {
         >
           <form id="contactForm" ref={form} onSubmit={sendEmail}>
             <div className="mb-6">
-              <div className="mx-0 mb-1 sm:mb-6 flex gap-4">
-                <div className="mb-1 w-full ">
+              <div className="mx-0  sm:mb-6 flex gap-4">
+                <div className="w-full ">
                   <label htmlFor="email" className="pb-1 text-xs uppercase tracking-wide " />
                   <input
                     type="email"
                     id="email"
                     autoComplete="email"
                     placeholder="YOUR EMAIL"
-                    className="input-field border border-1 sm:border-2 dark:border-slate-300 border-slate-400 rounded-full mb-2 w-full text-right dark:bg-[#252525] py-3 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0 focus:outline-0 focus:border-separate"
+                    className="input-field border border-1 sm:border-2 dark:border-slate-300 border-slate-400 rounded-full w-full      h-[70%] md:h-full text-right dark:bg-[#252525] py-3 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0 focus:outline-0 focus:border-separate"
                     name="email"
                   />
                 </div>
-                <div className="mb-1 w-full">
+                <div className="w-full">
                   <label htmlFor="name" className="pb-1 text-xs uppercase tracking-wider" />
                   <input
                     type="text"
                     id="name"
                     autoComplete="given-name"
                     placeholder="YOUR NAME"
-                    className="input-field border border-1 sm:border-2 dark:border-slate-300 border-slate-400 rounded-full mb-2 w-full text-right dark:bg-[#252525] py-3 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0 focus:outline-0 focus:border-separate"
+                    className="input-field border border-1 sm:border-2 dark:border-slate-300 border-slate-400 rounded-full w-full h-[70%] md:h-full text-right dark:bg-[#252525] py-3 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0 focus:outline-0 focus:border-separate"
                     name="name"
                   />
                 </div>
               </div>
-              <div className="mb-1 sm:mb-6 ">
+              <div className="my-3 sm:my-10">
                 <label htmlFor="subject" className="pb-1 text-xs uppercase tracking-wider" />
                 <input
                   type="text"
                   id="subject"
                   autoComplete="given-subject"
                   placeholder="YOUR SUBJECT"
-                  className="input-field border border-1 sm:border-2 dark:border-slate-300 border-slate-400 rounded-full mb-2 w-full text-right dark:bg-[#252525] py-3 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0 focus:outline-0 focus:border-separate"
+                  className="input-field border border-1 sm:border-2 dark:border-slate-300 border-slate-400 rounded-full mb-2 w-full h-[70%] md:h-full text-right dark:bg-[#252525] py-3 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0 focus:outline-0 focus:border-separate"
                   name="subject"
                 />
               </div>
@@ -83,7 +83,7 @@ function Contact() {
                   cols="30"
                   rows="6"
                   placeholder="YOUR MESSAGE"
-                  className="input-field mb-2 w-full border border-1 sm:border-2 dark:border-slate-300 border-slate-400 rounded-2xl text-right dark:bg-[#252525] py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0 focus:outline-0 focus:border-separate"
+                  className="input-field mb-2 w-full h-[70%] md:h-full border border-1 sm:border-2 dark:border-slate-300 border-slate-400 rounded-2xl text-right dark:bg-[#252525] py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0 focus:outline-0 focus:border-separate"
                 />
               </div>
             </div>
