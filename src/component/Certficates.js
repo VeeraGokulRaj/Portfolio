@@ -49,15 +49,15 @@ function Certficates() {
     <Slide index={index} key={index}>
       <div className="flex flex-col items-center justify-center">
         <img src={certificate.link} alt={certificate.alt} className="w-full h-full object-contain" />
-        <h3 className="text-center mt-4 text-lg md:text-xl">{certificate.title}</h3>
+        <h3 className="text-center mt-4 text-sm sm:text-lg md:text-xl">{certificate.title}</h3>
       </div>
     </Slide>
   ));
 
   return (
-    <div className="dark:bg-[#111111] bg-white dark:text-[white] text-slate-800 flex items-center justify-center">
+    <div className="dark:bg-[#111111] bg-white dark:text-[white] text-slate-800 flex items-center justify-center display:block">
       <div className="w-full max-w-lg p-4">
-        <h1 className="font-bold text-2xl my-10 text-center underline underline-offset-8 decoration-[2px] decoration-[#2196f3]">MY CERTIFICATES</h1>
+        <h1 className="font-bold text-2xl my-10 text-center underline underline-offset-8 decoration-[1.5px] sm:decoration-[2px] decoration-[#2196f3]">MY CERTIFICATES</h1>
         <CarouselProvider
           naturalSlideWidth={400}
           naturalSlideHeight={380}

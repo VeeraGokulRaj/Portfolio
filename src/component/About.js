@@ -12,19 +12,21 @@ function About() {
     threshold: 0.1
   });
   return (
-    <>
+    <div className="dark:bg-[#111111] bg-white dark:text-[white] text-[black] sm:h-screen w-full">
       <section>
-        <h1 className="text-4xl half-nav-bt-sm:text-5xl md:text-6xl font-extrabold text-center py-20 hidden sm:block underline underline-offset-8 decoration-[3px] decoration-[#2196f3]">
+        <h1 className="text-4xl half-nav-bt-sm:text-5xl md:text-6xl font-extrabold text-center py-20 hidden sm:block underline underline-offset-8 decoration-[2px] sm:decoration-[2.5px] decoration-[#2196f3]">
           ABOUT <span className="text-[#2196f3] dark:text-[#42aefc]">ME</span>
         </h1>
       </section>
-      <div className="mb-10 dark:bg-[#111111] bg-white dark:text-[white] text-[black] h-full mx-auto w-[90%] sm:mx-[3%] md:my-20 ">
-        <h1 className="text-3xl font-extrabold text-center py-10  sm:py-20 block sm:hidden underline underline-offset-8 decoration-[3px] decoration-[#2196f3]">
+      <div className="mb-10  mx-auto w-[90%] sm:mx-[3%] md:my-20 ">
+        <h1 className="text-3xl font-extrabold text-center py-10  sm:py-20 block sm:hidden underline underline-offset-8 decoration-[1.5px] sm:decoration-[2.5px] decoration-[#2196f3]">
           ABOUT <span className="text-[#42aefc]">ME</span>
         </h1>
-        <div className="flex flex-col justify-center items-center sm:flex-row md:justify-around sm:items-start">
+        <div className="flex flex-col justify-center items-center sm:flex-row md:justify-around sm:items-start sm:justify-start">
           <section className="w-[90%] mx-auto sm:mx-0 sm:w-[30%]">
-            <p className="font-bold text-2xl hidden sm:block mb-5 text-center sm:text-left">PROJECTS STATUS</p>
+            <p className="font-bold text-2xl hidden sm:block mb-5 text-center sm:text-left underline underline-offset-8 decoration-[1.5px] sm:decoration-[2.5px] decoration-[#2196f3]">
+              PROJECTS STATUS
+            </p>
             <div className="grid grid-row-2 md:grid-cols-2 gap-4 sm:justify-between sm:items-center">
               <section className={`w-[100%] h-[100%] text-center ${animationInView ? "animate-zoomIn" : ""} `} ref={animation}>
                 <div className="dark:border-gray-800  border-2 w-[70%] h-[100%] mx-auto p-10 sm:p-0 sm:mx-0 sm:w-[100%] sm:h-[100%]  md:w-[100%] md:h-[170%] flex items-center flex-col justify-center">
@@ -43,7 +45,7 @@ function About() {
                   <p className="md:text-6xl text-4xl font-bold text-[#2196f3] dark:text-[#42aefc] hover:scale-project hover:-translate-y-3 ease-in duration-300">
                     1
                   </p>
-                  <p className="sm:text-[.8rem] md:text-base mt-2 font-medium">
+                  <p className="sm:text-[.8rem] md:text-base mt-2 font-medium ">
                     ONGOING
                     <br />
                     PROJECTS
@@ -54,7 +56,9 @@ function About() {
           </section>
 
           <section className="w-[80%] mx-auto sm:mx-0 my-7 sm:my-0 sm:w-[43%]">
-            <p className="font-bold text-2xl mb-5 text-center sm:text-left">PERSONAL INFO</p>
+            <p className="font-bold text-2xl my-7 sm:my-0 sm:mb-5 text-center sm:text-left underline underline-offset-8 decoration-[1.5px] sm:decoration-[2px] decoration-[#2196f3] ">
+              PERSONAL INFO
+            </p>
             <div className="flex flex-col justify-center items-center show-info:flex-row show-info:justify-between">
               <table
                 className={`table-auto w-full show-info:w-[30%] ${animationInView ? "animate-fromLeftToCenter" : ""} `}
@@ -94,8 +98,10 @@ function About() {
                   </td>
                 </tr>
               </table>
-              <table className={`tabel-auto w-full show-info:w-[30%] ${animationInView ? "animate-fromRightToCenter" : ""} `}
-                ref={animation}>
+              <table
+                className={`tabel-auto w-full show-info:w-[30%] ${animationInView ? "animate-fromRightToCenter" : ""} `}
+                ref={animation}
+              >
                 <p className="my-2" />
                 <tr>
                   <td className="dark:text-[#B3B3B3] text-slate-600 font-medium">Last_Name</td>
@@ -143,7 +149,7 @@ function About() {
         </div>
       </div>
       <Skills />
-    </>
+    </div>
   );
 }
 

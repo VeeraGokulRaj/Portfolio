@@ -46,9 +46,6 @@ function App() {
         </Routes>
       </AnimatePresence>
       <Navbar />
-      <Routes location={location} key={location.pathname}>
-        <Route path="/Portfolio/contact" element={<Footer />} />
-      </Routes>
       <Dark />
     </div>
   );
