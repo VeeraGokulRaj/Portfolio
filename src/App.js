@@ -10,7 +10,6 @@ import Education from "./component/Education";
 import Dark from "./component/Dark";
 import Project from "./component/Project";
 import Contact from "./component/Contact";
-import Footer from "./component/Footer";
 import ScrollToTop from "./component/ScroolTop";
 
 function App() {

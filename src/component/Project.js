@@ -8,6 +8,8 @@ import { motion } from "framer-motion";
 import { FaHtml5 } from "react-icons/fa";
 import { FaPhp } from "react-icons/fa";
 import { SiXampp } from "react-icons/si";
+import CIcon from '@coreui/icons-react';
+import { cibBlender } from '@coreui/icons';
 
 import SurvilanceSystem from "../assets/Projects/SurvilanceSystem.png";
 import OnDuty from "../assets/Projects/OnDuty.jpg";
@@ -40,7 +42,7 @@ function Project() {
       image: bleander,
       description:
         "Developed a ReactJS and ExpressJS web app for accurate weather information retrieval and display based on city names. Improved user engagement by offering a reliable seven-day weather forecast, resulting in a 30% increase in user interaction.",
-      stackIcons: [], // Example icons for React and Node.js
+      stackIcons: [<CIcon className={`w-[1.5rem] h-[1.5rem] `} icon={cibBlender} style={{ fill: '#2196f3' }} />], // Example icons for React and Node.js
       link: "https://drive.google.com/file/d/1Dt7qfVVGczPj6U3sMH9xLgCB9BMXI709/view"
     },
     {

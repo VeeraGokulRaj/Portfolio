@@ -43,7 +43,7 @@ function Navbar() {
             Home
           </div>
         </button>
-        <p className="text-[.73rem] text-center pt-2 sm:hidden">HOME</p>
+        <p className="text-[.73rem] text-center pt-2 sm:hidden font-bold">HOME</p>
       </section>
       <section
         className={`dark:text-${isActive("/Portfolio/about") ? "[#42aefc]" : "[#2B2A2A]"} text-${
@@ -67,7 +67,7 @@ function Navbar() {
             About
           </div>
         </button>
-        <p className="text-[.73rem] text-center pt-2 sm:hidden">ABOUT</p>
+        <p className="text-[.73rem] text-center pt-2 sm:hidden font-bold">ABOUT</p>
       </section>
       <section
         className={`dark:text-${isActive("/Portfolio/education") ? "[#42aefc]" : "[#2B2A2A]"} text-${
@@ -91,7 +91,7 @@ function Navbar() {
             Education
           </div>
         </button>
-        <p className="text-[.73rem] text-center pt-2 sm:hidden">EDU</p>
+        <p className="text-[.73rem] text-center pt-2 sm:hidden font-bold">EDU</p>
       </section>
       <section
         className={`dark:text-${isActive("/Portfolio/project") ? "[#42aefc]" : "[#2B2A2A]"} text-${
@@ -115,7 +115,7 @@ function Navbar() {
             Project
           </div>
         </button>
-        <p className="text-[.73rem] text-center pt-2 sm:hidden">PROJECT</p>
+        <p className="text-[.73rem] text-center pt-2 sm:hidden font-bold">PROJECT</p>
       </section>
       <section
         className={`dark:text-${isActive("/Portfolio/contact") ? "[#42aefc]" : "[#2B2A2A]"} text-${
@@ -139,7 +139,7 @@ function Navbar() {
             Contact
           </div>
         </button>
-        <p className="text-[.73rem] text-center pt-2 sm:hidden">CONTACT</p>
+        <p className="text-[.73rem] text-center pt-2 sm:hidden font-bold">CONTACT</p>
       </section>
     </div>
   );
