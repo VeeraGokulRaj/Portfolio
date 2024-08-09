@@ -41,7 +41,7 @@ function Project() {
       title: "3D Models",
       image: bleander,
       description:
-        "Developed a ReactJS and ExpressJS web app for accurate weather information retrieval and display based on city names. Improved user engagement by offering a reliable seven-day weather forecast, resulting in a 30% increase in user interaction.",
+        "I developed a variety of 3D designs, gaining hands-on experience in creating detailed 3D meshes, sculpting, rigging, and texturing. Using Blender, I mastered the process from concept to fully rigged and textured models, enhancing my skills in 3D artistry and animation.",
       stackIcons: [<CIcon className={`w-[1.5rem] h-[1.5rem] `} icon={cibBlender} style={{ fill: '#2196f3' }} />], // Example icons for React and Node.js
       link: "https://drive.google.com/file/d/1Dt7qfVVGczPj6U3sMH9xLgCB9BMXI709/view"
     },
