@@ -8,11 +8,12 @@ function Footer() {
           © 2024 VEERA. All Rights Reserved.
         </h1>
         <div className="flex w-[30%] justify-evenly mr-[5%]">
+          
           <a
-            href="https://www.instagram.com/_.v_.e_.e_.r_.a_/"
-            class="text-xl half-nav-bt-sm:xl md:text-2xl text-white text-center hover:text-slate-300 ease-in duration-200"
+            href="https://www.linkedin.com/in/veeragokulraj/"
+            class="text-xl half-nav-bt-sm:xl md:text-2xl text-white text-center hover:text-slate-200 ease-in duration-300"
           >
-            <FaInstagram />
+            <FaLinkedin />
           </a>
           <a
             href="https://github.com/VeeraGokulRaj"
@@ -21,16 +22,16 @@ function Footer() {
             <FaGithub />
           </a>
           <a
-            href="https://www.linkedin.com/in/veeragokulraj/"
-            class="text-xl half-nav-bt-sm:xl md:text-2xl text-white text-center hover:text-slate-200 ease-in duration-300"
-          >
-            <FaLinkedin />
-          </a>
-          <a
             href="https://api.whatsapp.com/send?phone=8610658443&text=Hai VEERA "
             class="text-xl half-nav-bt-sm:xl md:text-2xl text-white text-center hover:text-slate-200 ease-in duration-300"
           >
             <FaWhatsapp />
+          </a>
+          <a
+            href="https://www.instagram.com/_.v_.e_.e_.r_.a_/"
+            class="text-xl half-nav-bt-sm:xl md:text-2xl text-white text-center hover:text-slate-300 ease-in duration-200"
+          >
+            <FaInstagram />
           </a>
         </div>
       </div>
